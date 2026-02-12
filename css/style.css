@@ -219,48 +219,67 @@ background-color: blue;
    background-color: rgb(199, 161, 65);
 }
 /* 800px dan 400px gacha bo'lgan ekranlar uchun */
+/* 1. Viewport (Buni HTML <head> qismiga albatta qo'shing): 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+*/
+
 @media (max-width: 800px) and (min-width: 300px) {
     .one {
-        height: auto; /* Balandlikni avtomatik qilamiz, kontent sig'ishi uchun */
-        padding-bottom: 50px;
+        display: flex; /* Flexbox yoqilishi shart */
+        height: auto; /* Balandlik cheklovini olib tashlaymiz */
+        min-height: 100vh;
+        padding: 40px 10px;
+        margin-top: 20px;
     }
 
     .one__one {
-        flex-direction: column; /* Elementlarni ustma-ust tushiramiz */
+        display: flex;
+        flex-direction: column; /* Elementlarni ustma-ust tushirish */
         height: auto;
-        gap: 30px;
+        gap: 40px; /* Bloklar orasidagi masofa */
+        margin-top: 50px;
     }
 
     .one__first {
-        width: 90%; /* Kenglikni ekran kengligiga moslaymiz */
-        height: auto; /* Balandlikni moslashuvchan qilamiz */
-        margin-top: 50px; /* Ortiqcha joyni kamaytiramiz */
-        padding: 20px 0;
-        margin-left: auto;
-        margin-right: auto;
+        width: 95%; /* Kenglik moslashuvchan bo'ladi */
+        height: auto; /* Balandlik matnga qarab o'zgaradi */
+        min-height: 350px;
+        margin-top: 0; /* Rasmdagi katta joyni yo'qotadi */
+        padding: 30px 15px;
+        text-align: start; /* Mobil qurilmada markazda chiroyli ko'rinadi */
     }
 
     .second {
-        width: 90%; /* Ikkinchi blokni ham kichraytiramiz */
+        width: 95%;
     }
 
     .one__logo {
-        font-size: 35px; /* Logoni kichraytiramiz */
-        margin-top: 40px;
+        font-size: 32px;
+        margin-top: 20px;
+        line-height: 1.2;
     }
 
     .first__paragref, 
     .first__paragrefe, 
     .first__paragreff {
-        font-size: 28px; /* Matnlar o'lchamini moslaymiz */
-        text-align: center;
+        font-size: 26px;
         margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .first__li {
+        font-size: 18px;
+        list-style: none;
+        margin-bottom: 10px;
     }
 
     .first__btn, 
     .first__btnn {
-        display: block;
-        margin: 20px auto; /* Tugmalarni markazga suramiz */
         width: 80%;
+        margin: 20px auto 0 auto; /* Markazga surish */
+        display: block;
+        font-size: 18px;
     }
 }
+

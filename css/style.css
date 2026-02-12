@@ -4,6 +4,8 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+      margin: 0;
+    padding: 0;
 
 }
 
@@ -218,15 +220,11 @@ background-color: blue;
        color: rgb(55, 55, 167);
    background-color: rgb(199, 161, 65);
 }
-/* 800px dan 400px gacha bo'lgan ekranlar uchun */
-/* 1. Viewport (Buni HTML <head> qismiga albatta qo'shing): 
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-*/
 
 @media (max-width: 800px) and (min-width: 300px) {
     .one {
-        display: flex; /* Flexbox yoqilishi shart */
-        height: auto; /* Balandlik cheklovini olib tashlaymiz */
+        display: flex; 
+        height: auto; 
         min-height: 100vh;
         padding: 40px 10px;
         margin-top: 20px;
@@ -234,19 +232,19 @@ background-color: blue;
 
     .one__one {
         display: flex;
-        flex-direction: column; /* Elementlarni ustma-ust tushirish */
+        flex-direction: column; 
         height: auto;
-        gap: 40px; /* Bloklar orasidagi masofa */
+        gap: 40px; 
         margin-top: 50px;
     }
 
     .one__first {
-        width: 95%; /* Kenglik moslashuvchan bo'ladi */
-        height: auto; /* Balandlik matnga qarab o'zgaradi */
+        width: 95%;
+        height: auto; 
         min-height: 350px;
-        margin-top: 0; /* Rasmdagi katta joyni yo'qotadi */
+        margin-top: 0; 
         padding: 30px 15px;
-        text-align: start; /* Mobil qurilmada markazda chiroyli ko'rinadi */
+        text-align: start; 
     }
 
     .second {
@@ -277,7 +275,7 @@ background-color: blue;
     .first__btn, 
     .first__btnn {
         width: 80%;
-        margin: 20px auto 0 auto; /* Markazga surish */
+        margin: 20px auto 0 auto; 
         display: block;
         font-size: 18px;
     }

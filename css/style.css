@@ -219,7 +219,7 @@ background-color: blue;
    background-color: rgb(199, 161, 65);
 }
 /* 800px dan 400px gacha bo'lgan ekranlar uchun */
-@media (max-width: 800px) and (min-width: 400px) {
+@media (max-width: 800px) and (min-width: 300px) {
     .one {
         height: auto; /* Balandlikni avtomatik qilamiz, kontent sig'ishi uchun */
         padding-bottom: 50px;
